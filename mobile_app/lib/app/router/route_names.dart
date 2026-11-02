@@ -1,0 +1,19 @@
+abstract final class RouteNames {
+  static const splash = 'splash';
+  static const login = 'login';
+  static const dashboard = 'dashboard';
+  static const rooms = 'rooms';
+  static const routines = 'routines';
+  static const timeline = 'timeline';
+  static const settings = 'settings';
+  static const security = 'security';
+  static const climate = 'climate';
+  static const energy = 'energy';
+  static const routineDetail = 'routine-detail';
+  static const explain = 'explain';
+  static const roomDetail = 'room-detail';
+  static const ruleEditor = 'rule-editor';
+  static const modes = 'modes';
+  static const context = 'context';
+  static const conflicts = 'conflicts';
+}

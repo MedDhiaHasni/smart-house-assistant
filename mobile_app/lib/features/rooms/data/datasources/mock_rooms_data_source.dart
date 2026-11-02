@@ -1,0 +1,128 @@
+import 'package:flutter/material.dart';
+
+import '../models/room_models.dart';
+
+List<RoomCard> smartHomeRooms() {
+  return [
+    RoomCard(
+      id: 'living_room',
+      name: 'Living room',
+      icon: Icons.chair_alt_rounded,
+      color: Colors.blue,
+      status: 'Occupied',
+      statusColor: Colors.green,
+      temperature: 21.4,
+      devices: 5,
+      devicesList: [
+        RoomDevice(
+          deviceId: 'living-room-heater',
+          name: 'Lights',
+          state: 'On',
+          icon: Icons.lightbulb_rounded,
+          isToggle: true,
+          enabled: true,
+          value: 100,
+        ),
+        RoomDevice(
+          deviceId: 'living-room-heater',
+          name: 'Heater',
+          state: 'Comfort mode',
+          icon: Icons.thermostat_rounded,
+          isToggle: false,
+          enabled: true,
+          value: 72,
+        ),
+        RoomDevice(
+          deviceId: 'living-room-heater',
+          name: 'TV',
+          state: 'Idle',
+          icon: Icons.tv_rounded,
+          isToggle: true,
+          enabled: false,
+          value: 0,
+        ),
+      ],
+    ),
+    RoomCard(
+      id: 'kitchen',
+      name: 'Kitchen',
+      icon: Icons.kitchen_rounded,
+      color: Colors.orange,
+      status: 'Active',
+      statusColor: Colors.orange,
+      temperature: 19.8,
+      devices: 4,
+      devicesList: [
+        RoomDevice(
+          deviceId: 'kitchen-light',
+          name: 'Lights',
+          state: 'On',
+          icon: Icons.lightbulb_rounded,
+          isToggle: true,
+          enabled: true,
+          value: 90,
+        ),
+        RoomDevice(
+          deviceId: 'kitchen-light',
+          name: 'Extractor',
+          state: 'Low speed',
+          icon: Icons.air_rounded,
+          isToggle: false,
+          enabled: true,
+          value: 40,
+        ),
+      ],
+    ),
+    RoomCard(
+      id: 'bedroom',
+      name: 'Bedroom',
+      icon: Icons.bed_rounded,
+      color: Colors.purple,
+      status: 'Sleeping',
+      statusColor: Colors.blue,
+      temperature: 19.1,
+      devices: 3,
+      devicesList: [
+        RoomDevice(
+          deviceId: 'bedroom-heater',
+          name: 'Shutters',
+          state: 'Closed',
+          icon: Icons.window_rounded,
+          isToggle: true,
+          enabled: true,
+          value: 100,
+        ),
+        RoomDevice(
+          deviceId: 'bedroom-heater',
+          name: 'Heater',
+          state: 'Blocked',
+          icon: Icons.thermostat_rounded,
+          isToggle: false,
+          enabled: false,
+          value: 0,
+        ),
+      ],
+    ),
+    RoomCard(
+      id: 'garage',
+      name: 'Garage',
+      icon: Icons.garage_rounded,
+      color: Colors.indigo,
+      status: 'Closed',
+      statusColor: Colors.grey,
+      temperature: 15.4,
+      devices: 2,
+      devicesList: [
+        RoomDevice(
+          deviceId: 'garage-door',
+          name: 'Door',
+          state: 'Closed',
+          icon: Icons.door_front_door_rounded,
+          isToggle: true,
+          enabled: false,
+          value: 0,
+        ),
+      ],
+    ),
+  ];
+}
