@@ -4,11 +4,13 @@ Flutter smart-home dashboard backed by Strapi v5. The mobile app supports Mock m
 
 ## Repository structure
 
-- `mobile_app/` — Flutter app, Riverpod state, named GoRouter routes, feature screens and data repositories
-- `backend/` — Strapi v5, SQLite development database, simulator contract, rule engine and Socket.IO server
-- `docs/` — architecture, API contract, simulator instructions and progress audit
+- `mobile_app/`: Flutter app, Riverpod state, named GoRouter routes, feature screens and data repositories
+- [`backend/`](./backend/README.md): Strapi v5, SQLite development database, simulator contract, rule engine and Socket.IO server
+- `docs/`: architecture, API contract, simulator instructions and progress audit
 
 ## Run the backend
+
+> Detailed Strapi setup (environment variables, roles, API tokens, seed): see [backend/README.md](./backend/README.md).
 
 From the repository root, create a local environment file from the safe template and replace every placeholder with a unique local value:
 
@@ -56,4 +58,9 @@ The live repository integration test runs against a started backend when `LIVE_T
 flutter test --dart-define=LIVE_TEST_API_URL=http://localhost:1337/api
 ```
 
-See [docs/API_CONTRACT.md](./docs/API_CONTRACT.md), [docs/SIMULATOR_INTEGRATION.md](./docs/SIMULATOR_INTEGRATION.md), and [docs/ARCHITECTURE.md](./docs/ARCHITECTURE.md).
+## Documentation
+
+- [Backend setup (Strapi)](./backend/README.md)
+- [API contract](./docs/API_CONTRACT.md)
+- [Simulator integration](./docs/SIMULATOR_INTEGRATION.md)
+- [Architecture](./docs/ARCHITECTURE.md)
