@@ -1,0 +1,16 @@
+{
+    "kind": "collectionType",
+    "collectionName": "context_variables",
+    "info": {
+        "singularName": "context-variable",
+        "pluralName": "context-variables",
+        "displayName": "Context Variable"
+    },
+    "options": { "draftAndPublish": false },
+    "attributes": {
+        "key": { "type": "string", "required": true, "unique": true },
+        "value": { "type": "json", "required": true },
+        "source": { "type": "string", "required": true },
+        "observedAt": { "type": "datetime", "required": true }
+    }
+}

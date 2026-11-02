@@ -1,0 +1,19 @@
+{
+  "kind": "collectionType",
+  "collectionName": "routines",
+  "info": {
+    "singularName": "routine",
+    "pluralName": "routines",
+    "displayName": "Routine"
+  },
+  "options": { "draftAndPublish": false },
+  "attributes": {
+    "name": { "type": "string", "required": true },
+    "enabled": { "type": "boolean", "default": true },
+    "trigger": { "type": "json", "required": true },
+    "conditions": { "type": "json", "default": [] },
+    "exceptions": { "type": "json", "default": [] },
+    "actions": { "type": "json", "required": true },
+    "priority": { "type": "integer", "default": 0 }
+  }
+}

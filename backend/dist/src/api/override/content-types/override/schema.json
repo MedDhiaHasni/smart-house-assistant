@@ -1,0 +1,18 @@
+{
+    "kind": "collectionType",
+    "collectionName": "overrides",
+    "info": {
+        "singularName": "override",
+        "pluralName": "overrides",
+        "displayName": "Override"
+    },
+    "options": { "draftAndPublish": false },
+    "attributes": {
+        "externalId": { "type": "string", "required": true, "unique": true },
+        "value": { "type": "json", "required": true },
+        "startsAt": { "type": "datetime", "required": true },
+        "expiresAt": { "type": "datetime", "required": true },
+        "active": { "type": "boolean", "default": true },
+        "device": { "type": "relation", "relation": "manyToOne", "target": "api::device.device" }
+    }
+}

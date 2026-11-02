@@ -1,0 +1,17 @@
+{
+    "kind": "collectionType",
+    "collectionName": "alerts",
+    "info": {
+        "singularName": "alert",
+        "pluralName": "alerts",
+        "displayName": "Alert"
+    },
+    "options": { "draftAndPublish": false },
+    "attributes": {
+        "severity": { "type": "enumeration", "enum": ["info", "warning", "critical"], "default": "info" },
+        "title": { "type": "string", "required": true },
+        "message": { "type": "text", "required": true },
+        "acknowledged": { "type": "boolean", "default": false },
+        "createdAt": { "type": "datetime", "required": true }
+    }
+}

@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "commands",
+  "info": {
+    "singularName": "command",
+    "pluralName": "commands",
+    "displayName": "Command"
+  },
+  "options": { "draftAndPublish": false },
+  "attributes": {
+    "externalId": { "type": "string", "required": true, "unique": true },
+    "name": { "type": "string", "required": true },
+    "payload": { "type": "json", "required": true },
+    "status": { "type": "enumeration", "enum": ["queued", "sent", "succeeded", "failed"], "default": "queued" },
+    "attempts": { "type": "integer", "default": 0 },
+    "device": { "type": "relation", "relation": "manyToOne", "target": "api::device.device" }
+  }
+}

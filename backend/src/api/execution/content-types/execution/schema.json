@@ -1,0 +1,17 @@
+{
+  "kind": "collectionType",
+  "collectionName": "executions",
+  "info": {
+    "singularName": "execution",
+    "pluralName": "executions",
+    "displayName": "Execution"
+  },
+  "options": { "draftAndPublish": false },
+  "attributes": {
+    "status": { "type": "enumeration", "enum": ["evaluating", "pending", "succeeded", "failed", "skipped"], "default": "evaluating" },
+    "triggerEvent": { "type": "json", "required": true },
+    "trace": { "type": "json", "default": [] },
+    "simulatedAt": { "type": "datetime", "required": true },
+    "rule": { "type": "relation", "relation": "manyToOne", "target": "api::rule.rule" }
+  }
+}

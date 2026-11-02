@@ -1,0 +1,19 @@
+{
+    "kind": "collectionType",
+    "collectionName": "rules",
+    "info": {
+        "singularName": "rule",
+        "pluralName": "rules",
+        "displayName": "Rule"
+    },
+    "options": { "draftAndPublish": false },
+    "attributes": {
+        "name": { "type": "string", "required": true },
+        "enabled": { "type": "boolean", "default": true },
+        "trigger": { "type": "json", "required": true },
+        "conditions": { "type": "json", "default": [] },
+        "exceptions": { "type": "json", "default": [] },
+        "actions": { "type": "json", "required": true },
+        "priority": { "type": "integer", "default": 0 }
+    }
+}

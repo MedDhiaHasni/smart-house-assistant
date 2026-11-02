@@ -1,0 +1,18 @@
+{
+    "kind": "collectionType",
+    "collectionName": "devices",
+    "info": {
+        "singularName": "device",
+        "pluralName": "devices",
+        "displayName": "Device"
+    },
+    "options": { "draftAndPublish": false },
+    "attributes": {
+        "externalId": { "type": "string", "required": true, "unique": true },
+        "name": { "type": "string", "required": true },
+        "category": { "type": "string", "required": true },
+        "state": { "type": "json", "default": {} },
+        "online": { "type": "boolean", "default": true },
+        "room": { "type": "relation", "relation": "manyToOne", "target": "api::room.room", "inversedBy": "devices" }
+    }
+}

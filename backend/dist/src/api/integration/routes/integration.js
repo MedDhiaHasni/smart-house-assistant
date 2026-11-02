@@ -1,0 +1,35 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const publicRoute = { auth: false };
+exports.default = {
+    routes: [
+        { method: 'GET', path: '/dashboard/summary', handler: 'integration.dashboardSummary', config: publicRoute },
+        { method: 'GET', path: '/rooms', handler: 'resources.rooms', config: publicRoute },
+        { method: 'GET', path: '/devices', handler: 'resources.devices', config: publicRoute },
+        { method: 'GET', path: '/routines', handler: 'resources.routines', config: publicRoute },
+        { method: 'PUT', path: '/routines/:id', handler: 'resources.updateRoutine', config: publicRoute },
+        { method: 'GET', path: '/timeline', handler: 'resources.timeline', config: publicRoute },
+        { method: 'GET', path: '/context', handler: 'integration.context', config: publicRoute },
+        { method: 'POST', path: '/context', handler: 'integration.updateContext', config: publicRoute },
+        { method: 'POST', path: '/rules/validate', handler: 'integration.validateRule', config: publicRoute },
+        { method: 'POST', path: '/rules/dry-run', handler: 'integration.dryRun', config: publicRoute },
+        { method: 'GET', path: '/rules/conflicts', handler: 'integration.conflicts', config: publicRoute },
+        { method: 'GET', path: '/rules', handler: 'integration.rules', config: publicRoute },
+        { method: 'PUT', path: '/rules/:id', handler: 'integration.updateRule', config: publicRoute },
+        { method: 'GET', path: '/explain/device/:deviceId/last-change', handler: 'integration.explainDevice', config: publicRoute },
+        { method: 'GET', path: '/explain/:executionId', handler: 'integration.explainExecution', config: publicRoute },
+        { method: 'GET', path: '/modes', handler: 'integration.modes', config: publicRoute },
+        { method: 'POST', path: '/modes', handler: 'integration.setMode', config: publicRoute },
+        { method: 'POST', path: '/overrides', handler: 'integration.createOverride', config: publicRoute },
+        { method: 'DELETE', path: '/overrides/:id', handler: 'integration.deleteOverride', config: publicRoute },
+        { method: 'POST', path: '/devices/:id/command', handler: 'integration.deviceCommand', config: publicRoute },
+        { method: 'POST', path: '/emergency/all-off', handler: 'integration.emergencyAllOff', config: publicRoute },
+        { method: 'GET', path: '/energy/summary', handler: 'integration.energySummary', config: publicRoute },
+        { method: 'POST', path: '/sim/event', handler: 'integration.simulatorEvent', config: publicRoute },
+        { method: 'POST', path: '/sim/device-state', handler: 'integration.simulatorDeviceState', config: publicRoute },
+        { method: 'POST', path: '/sim/context', handler: 'integration.simulatorContext', config: publicRoute },
+        { method: 'POST', path: '/sim/batch', handler: 'integration.simulatorBatch', config: publicRoute },
+        { method: 'GET', path: '/sim/commands', handler: 'integration.simulatorCommands', config: publicRoute },
+        { method: 'POST', path: '/sim/commands/:id/result', handler: 'integration.simulatorCommandResult', config: publicRoute },
+    ],
+};

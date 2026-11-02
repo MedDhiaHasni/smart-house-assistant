@@ -1,0 +1,17 @@
+{
+  "kind": "collectionType",
+  "collectionName": "people",
+  "info": {
+    "singularName": "person",
+    "pluralName": "people",
+    "displayName": "Person"
+  },
+  "options": { "draftAndPublish": false },
+  "attributes": {
+    "externalId": { "type": "string", "required": true, "unique": true },
+    "name": { "type": "string", "required": true },
+    "role": { "type": "enumeration", "enum": ["resident", "guest"], "default": "resident" },
+    "present": { "type": "boolean", "default": false },
+    "lastSeenAt": { "type": "datetime" }
+  }
+}
